@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Section = styled.div`
-  background-color: #f8f6ff;
-  height: 560px;
+  background-color: #fcf7ff;
+  height: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;

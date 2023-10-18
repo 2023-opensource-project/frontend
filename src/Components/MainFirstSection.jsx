@@ -5,7 +5,7 @@ import { SlNote, SlNotebook, SlPaperClip } from "react-icons/sl";
 function MainFirstSection() {
   return (
     <Section>
-      <TextStyle fontSize="40px" fontWeight="700" margin="20px 0">
+      <TextStyle fontSize="40px" fontWeight="700" margin="0 0 20px 0">
         이력서와 자기소개서 작성을 위한 <br />
         Chat GPT 활용 WEB
       </TextStyle>
