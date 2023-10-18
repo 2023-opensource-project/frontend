@@ -1,19 +1,12 @@
 import styled from "styled-components";
 
-export const Section1 = styled.div`
+export const Section = styled.div`
   background-color: #f8f6ff;
   height: 560px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
-export const Title = styled.div`
-  text-align: center;
-  font-size: 40px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 20px 0px;
 `;
 
 export const StepSection = styled.div`
@@ -31,25 +24,15 @@ export const StepObj = styled.div`
   box-sizing: border-box;
 `;
 
-export const Text1 = styled.div`
-  text-align: center;
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 10px;
-`;
-export const Text2 = styled.div`
-  text-align: center;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 40px;
-`;
-export const Text3 = styled.div`
-  text-align: center;
-  font-size: 14px;
-  font-weight: 300;
-`;
 export const IconWrap = styled.div`
   display: flex;
   justify-content: center;
   margin: 15px 0;
+`;
+
+export const TextStyle = styled.p`
+  text-align: center;
+  font-size: ${(props) => props.fontSize || "16px"};
+  font-weight: ${(props) => props.fontWeight || "normal"};
+  margin: ${(props) => props.margin || "0"};
 `;
