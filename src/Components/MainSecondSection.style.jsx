@@ -8,48 +8,58 @@ export const TextStyle = styled.p`
 `;
 
 export const Section = styled.div`
-  width: 1240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   padding: 40px 0;
+  flex-wrap: wrap;
+`;
+export const Inner = styled.div`
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 `;
 
 export const TabContainer = styled.div`
   display: flex;
-  /* border: 1px solid #ccc; */
-  /* border-radius: 5px; */
   overflow: hidden;
+  margin: 10px 0;
 `;
-export const Tabs = styled.div`
+export const Tab = styled.div`
   flex: 1;
   padding: 10px 0;
   text-align: center;
+  font-weight: 500;
+  background-color: ${(props) => (props.active ? "#F4EBFF" : "transparent")};
+  border: 1px solid #fafafa;
+  border-bottom: 3px solid transparent;
   cursor: pointer;
 
   &:hover {
-    background-color: #f4ebff;
-    border-bottom: 4px solid #bcb3da;
+    border-bottom: 3px solid #bcb3da;
   }
 `;
 
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
-  margin: 0 auto;
+  padding: 20px;
+  background-color: #fafafa;
+  font-size: 14px;
 `;
 export const Th = styled.th`
   height: 30px;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   border-bottom: 3px double #dedede;
+  font-weight: 400;
 `;
 export const Td = styled.td`
   height: 25px;
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid #dedede;
-  font-size: 12px;
   font-weight: 300;
 `;
