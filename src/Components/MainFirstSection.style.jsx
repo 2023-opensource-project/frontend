@@ -5,16 +5,20 @@ export const Section = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
   padding: 40px 0;
+`;
+export const Inner = styled.div`
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 `;
 
 export const StepSection = styled.div`
-  width: 1240px;
   margin: 20px auto;
   display: flex;
   justify-content: space-evenly;
-  padding: 0px 100px;
+  flex-wrap: wrap;
 `;
 export const StepObj = styled.div`
   background-color: #e0d8ff;
