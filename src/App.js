@@ -4,10 +4,8 @@ import MasterResume from "./Pages/MasterResume";
 
 function App() {
   return (
-    <div>
-      {/* <MainPage /> */}
-      <MasterResume />
-    </div>
+    // <MainPage />
+    <MasterResume />
   );
 }
 
