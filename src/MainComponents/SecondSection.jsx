@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Section, Inner, TextStyle, TabContainer, Tab } from "./MainSecondSection.style";
-import MainTabContent from "./MainTabContent";
+import { Section, TabContainer, Tab } from "./SecondSection.style.jsx";
+import { Inner, TextStyle } from "../Constants/style.jsx";
+import TabContent from "./TabContent.jsx";
 
-function MainSecondSection() {
+function SecondSection() {
   const data = [
     {
       Id: 1,
@@ -103,11 +104,11 @@ function MainSecondSection() {
             </Tab>
           </TabContainer>
 
-          <MainTabContent filteredData={filteredData} />
+          <TabContent filteredData={filteredData} />
         </Inner>
       </Section>
     </div>
   );
 }
 
-export default MainSecondSection;
+export default SecondSection;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Inner, HeaderContainer, Nav, Button } from "./Header.style.jsx";
+import { HeaderContainer, Nav, Button } from "./Header.style.jsx";
+import { Inner } from "../Constants/style.jsx";
 
 function Header() {
   return (

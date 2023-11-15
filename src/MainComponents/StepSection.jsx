@@ -1,8 +1,9 @@
 import React from "react";
-import { StepSection, StepObj, IconWrap, TextStyle } from "./MainFirstSection.style";
+import { StepSection, StepObj, IconWrap } from "./FirstSection.style.jsx";
+import { TextStyle } from "../Constants/style.jsx";
 import { SlNote, SlNotebook, SlPaperClip } from "react-icons/sl";
 
-function MainStepSection() {
+function StepSections() {
   return (
     <StepSection>
       <StepObj>
@@ -52,4 +53,4 @@ function MainStepSection() {
   );
 }
 
-export default MainStepSection;
+export default StepSections;

@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const TextStyle = styled.p`
-  text-align: center;
-  font-size: ${(props) => props.fontSize || "16px"};
-  font-weight: ${(props) => props.fontWeight || "400"};
-  margin: ${(props) => props.margin || "0"};
-`;
-
 export const Section = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,12 +7,6 @@ export const Section = styled.div`
   margin: 0 auto;
   padding: 40px 0;
   flex-wrap: wrap;
-`;
-export const Inner = styled.div`
-  max-width: 1240px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
 `;
 
 export const TabContainer = styled.div`

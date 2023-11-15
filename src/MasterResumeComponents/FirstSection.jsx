@@ -1,5 +1,6 @@
 import React from "react";
-import { Section, Inner, Line, IconWrap, NavWrap, TextStyle } from "./MasterResumeFirstSection.style";
+import { Section, Line, IconWrap, NavWrap } from "./FirstSection.style.jsx";
+import { Inner, TextStyle } from "../Constants/style.jsx";
 import {
   BsFill1CircleFill,
   BsFill2CircleFill,
@@ -11,7 +12,7 @@ import {
   BsFill8CircleFill,
 } from "react-icons/bs";
 
-function MasterResumeFirstSection() {
+function FirstSection() {
   const sections = [
     { icon: <BsFill1CircleFill size={28} color="#BABABA" />, text: "인적 사항" },
     { icon: <BsFill2CircleFill size={28} color="#BABABA" />, text: "학력 사항" },
@@ -42,4 +43,4 @@ function MasterResumeFirstSection() {
   );
 }
 
-export default MasterResumeFirstSection;
+export default FirstSection;

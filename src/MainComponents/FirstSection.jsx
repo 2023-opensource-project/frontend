@@ -1,8 +1,9 @@
 import React from "react";
-import { Section, Inner, TextStyle } from "./MainFirstSection.style";
-import MainStepSection from "./MainStepSection";
+import { Section } from "./FirstSection.style.jsx";
+import { Inner, TextStyle } from "../Constants/style.jsx";
+import StepSection from "./StepSection.jsx";
 
-function MainFirstSection() {
+function FirstSection() {
   return (
     <Section>
       <Inner>
@@ -14,10 +15,10 @@ function MainFirstSection() {
           다음 STEP을 따라 입사 지원 시에 필요한 서류를 완성해보세요.
         </TextStyle>
 
-        <MainStepSection />
+        <StepSection />
       </Inner>
     </Section>
   );
 }
 
-export default MainFirstSection;
+export default FirstSection;

@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  Inner,
-  TextStyle,
   Section,
   BorderSection,
   Button,
@@ -10,9 +8,10 @@ import {
   Label,
   InputField,
   InputRadio,
-} from "./MasterResumeSecondSction.style";
+} from "./SecondSection.style";
+import { Inner, TextStyle } from "../Constants/style.jsx";
 
-function MasterResumeSecondSection1() {
+function SecondSection1() {
   return (
     <Section>
       <Inner>
@@ -70,4 +69,4 @@ function MasterResumeSecondSection1() {
   );
 }
 
-export default MasterResumeSecondSection1;
+export default SecondSection1;

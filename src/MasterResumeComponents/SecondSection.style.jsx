@@ -1,20 +1,5 @@
 import styled from "styled-components";
 
-export const Inner = styled.div`
-  max-width: 1240px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-`;
-export const TextStyle = styled.p`
-  text-align: ${(props) => props.textAlign || "left"};
-  font-size: ${(props) => props.fontSize || "16px"};
-  font-weight: ${(props) => props.fontWeight || "400"};
-  color: ${(props) => props.color || "#404040"};
-  margin: ${(props) => props.margin || "0"};
-  padding: ${(props) => props.padding || "0"};
-`;
-
 export const Section = styled.div`
   padding: 20px 0;
   height: 100%;

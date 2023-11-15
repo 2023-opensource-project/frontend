@@ -1,7 +1,7 @@
 import React from "react";
-import { Table, Th, Td } from "./MainSecondSection.style";
+import { Table, Th, Td } from "./SecondSection.style";
 
-function MainTabContent({ filteredData }) {
+function TabContent({ filteredData }) {
   return (
     <Table>
       <thead>
@@ -32,4 +32,4 @@ function MainTabContent({ filteredData }) {
   );
 }
 
-export default MainTabContent;
+export default TabContent;
