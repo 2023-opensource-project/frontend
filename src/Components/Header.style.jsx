@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const Inner = styled.div`
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+`;
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
