@@ -17,7 +17,6 @@ export const Section0 = styled.div`
 function MasterResume() {
   return (
     <Container>
-      <Section0>Logo</Section0>
       <MasterResumeFirstSection />
       <MasterResumeSecondSection />
     </Container>

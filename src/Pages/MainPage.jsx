@@ -12,7 +12,6 @@ export const Section0 = styled.div`
 function MainPage() {
   return (
     <div>
-      <Section0>Logo</Section0>
       <MainFirstSection />
       <MainSecondSection />
     </div>

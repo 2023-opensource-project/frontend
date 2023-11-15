@@ -10,11 +10,6 @@ function Header() {
         <div>
           <ul>
             <li>
-              <Link to="/">HOME</Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
               <Link to="/masterResume">마스터 이력서 작성</Link>
             </li>
           </ul>
