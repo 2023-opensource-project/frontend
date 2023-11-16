@@ -140,23 +140,42 @@ const CareerInfo = () => {
 };
 
 const LanguageInfo = () => {
+  const [languageCount, setLanguageCount] = useState(1);
+
+  const handleAddLanguage = (event) => {
+    event.preventDefault();
+    setLanguageCount((prevCount) => prevCount + 1);
+  };
+
   return (
     <div style={{ margin: "20px 0 0 0" }}>
       <div style={{ borderBottom: "1px solid #ddd", marginBottom: "10px" }}>
         <TextStyle textAlign="left" fontSize="22px" fontWeight="600" margin="10px 0">
           어학 사항
+          <Button
+            type="button"
+            onClick={handleAddLanguage}
+            backgroundColor="#F4EBFF"
+            width="30px"
+            height="30px"
+            margin="0 20px"
+          >
+            +
+          </Button>
         </TextStyle>
       </div>
-      <div style={{ backgroundColor: "#FAFAFA", padding: "10px" }}>
-        <LineWrapper>
-          <FormItem label="어학 이름" name="languageName" />
-          <FormItem label="자격명" name="qualificationName" />
-        </LineWrapper>
-        <LineWrapper>
-          <FormItem label="등급/점수" name="gradeScore" />
-          <FormItem label="응시일자" type="date" name="testDate" />
-        </LineWrapper>
-      </div>
+      {Array.from({ length: languageCount }, (_, index) => (
+        <ItemWrapper key={index}>
+          <LineWrapper>
+            <FormItem label="어학 이름" name="languageName" />
+            <FormItem label="자격명" name="qualificationName" />
+          </LineWrapper>
+          <LineWrapper>
+            <FormItem label="등급/점수" name="gradeScore" />
+            <FormItem label="응시일자" type="date" name="testDate" />
+          </LineWrapper>
+        </ItemWrapper>
+      ))}
     </div>
   );
 };
