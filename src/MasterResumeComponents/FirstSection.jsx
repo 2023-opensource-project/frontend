@@ -32,7 +32,7 @@ function FirstSection() {
           {sections.map((section) => (
             <NavWrap>
               {section.icon}
-              <TextStyle fontSize="12px" fontWeight="600" margin="5px 0">
+              <TextStyle fontSize="12px" fontWeight="500" margin="5px 0">
                 {section.text}
               </TextStyle>
             </NavWrap>
