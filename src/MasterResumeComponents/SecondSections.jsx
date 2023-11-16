@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { Inner, TextStyle, Button } from "../Constants/style";
 import { Form, LineWrapper, Container, Input, Dropdown } from "./SecondSections.style";
 
@@ -49,25 +49,52 @@ const PersonalInfo = () => {
 };
 
 const EducationInfo = () => {
+  const [educationCount, setEducationCount] = useState(1);
+
+  const handleAddEducation = (event) => {
+    event.preventDefault();
+    setEducationCount((prevCount) => prevCount + 1);
+  };
+
   return (
     <div style={{ margin: "20px 0 0 0" }}>
       <div style={{ borderBottom: "1px solid #ddd", marginBottom: "10px" }}>
         <TextStyle textAlign="left" fontSize="22px" fontWeight="600" margin="10px 0">
           학력 사항
+          <Button
+            type="button"
+            onClick={handleAddEducation}
+            backgroundColor="#F4EBFF"
+            width="30px"
+            height="30px"
+            margin="0 20px"
+          >
+            +
+          </Button>
         </TextStyle>
       </div>
-      <LineWrapper>
-        <FormItem label="학교" name="school" />
-        <FormItem label="전공" name="major" />
-        <FormItem label="졸업 여부" type="dropdown" name="graduated" options={["졸업", "졸업예정", "재학", "휴학"]} />
-      </LineWrapper>
-      <LineWrapper>
-        <FormItem label="입학(년/월)" type="month" name="startMonth" />
-        <FormItem label="졸업(년/월)" type="month" name="endMonth" />
-      </LineWrapper>
+      {Array.from({ length: educationCount }, (_, index) => (
+        <div key={index} style={{ margin: "20px 0" }}>
+          <LineWrapper>
+            <FormItem label="학교" name={`school${index}`} />
+            <FormItem label="전공" name={`major${index}`} />
+            <FormItem
+              label="졸업 여부"
+              type="dropdown"
+              name={`graduated${index}`}
+              options={["졸업", "졸업예정", "재학", "휴학"]}
+            />
+          </LineWrapper>
+          <LineWrapper>
+            <FormItem label="입학(년/월)" type="month" name={`startMonth${index}`} />
+            <FormItem label="졸업(년/월)" type="month" name={`endMonth${index}`} />
+          </LineWrapper>
+        </div>
+      ))}
     </div>
   );
 };
+
 const CareerInfo = () => {
   return (
     <div style={{ margin: "20px 0 0 0" }}>
@@ -88,6 +115,7 @@ const CareerInfo = () => {
     </div>
   );
 };
+
 const LanguageInfo = () => {
   return (
     <div style={{ margin: "20px 0 0 0" }}>
