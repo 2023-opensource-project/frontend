@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { Inner, TextStyle, Button } from "../Constants/style";
-import { Form, LineWrapper, Container, Input, Dropdown } from "./SecondSections.style";
+import { Form, ItemWrapper, LineWrapper, Container, Input, Dropdown } from "./SecondSections.style";
 
 const FormItem = ({ label, type = "text", name, options }) => (
   <Container>
@@ -33,17 +33,19 @@ const PersonalInfo = () => {
           기본 인적 사항
         </TextStyle>
       </div>
-      <LineWrapper>
-        <FormItem label="이름" name="name" />
-        <FormItem label="영문 이름" name="englishName" />
-        <FormItem label="성별" type="dropdown" name="gender" options={["남성", "여성"]} />
-      </LineWrapper>
-      <LineWrapper>
-        <FormItem label="생년월일" type="date" name="birthDate" />
-        <FormItem label="휴대폰" type="tel" name="phone" />
-        <FormItem label="이메일" type="email" name="email" />
-      </LineWrapper>
-      <FormItem label="주소" name="address" />
+      <div style={{ backgroundColor: "#FAFAFA", padding: "10px" }}>
+        <LineWrapper>
+          <FormItem label="이름" name="name" />
+          <FormItem label="영문 이름" name="englishName" />
+          <FormItem label="성별" type="dropdown" name="gender" options={["남성", "여성"]} />
+        </LineWrapper>
+        <LineWrapper>
+          <FormItem label="생년월일" type="date" name="birthDate" />
+          <FormItem label="휴대폰" type="tel" name="phone" />
+          <FormItem label="이메일" type="email" name="email" />
+        </LineWrapper>
+        <FormItem label="주소" name="address" />
+      </div>
     </div>
   );
 };
@@ -74,7 +76,7 @@ const EducationInfo = () => {
         </TextStyle>
       </div>
       {Array.from({ length: educationCount }, (_, index) => (
-        <div key={index} style={{ margin: "20px 0" }}>
+        <ItemWrapper key={index}>
           <LineWrapper>
             <FormItem label="학교" name={`school${index}`} />
             <FormItem label="전공" name={`major${index}`} />
@@ -89,7 +91,7 @@ const EducationInfo = () => {
             <FormItem label="입학(년/월)" type="month" name={`startMonth${index}`} />
             <FormItem label="졸업(년/월)" type="month" name={`endMonth${index}`} />
           </LineWrapper>
-        </div>
+        </ItemWrapper>
       ))}
     </div>
   );
@@ -103,15 +105,17 @@ const CareerInfo = () => {
           경력 사항
         </TextStyle>
       </div>
-      <LineWrapper>
-        <FormItem label="구분" type="dropdown" name="career" options={["아르바이트", "인턴쉽"]} />
-        <FormItem label="회사명" name="companyName" />
-        <FormItem label="직무" name="position" />
-      </LineWrapper>
-      <LineWrapper>
-        <FormItem label="재직 시작일" type="date" name="startWorkDate" />
-        <FormItem label="재직 종료일" type="date" name="endWorkDate" />
-      </LineWrapper>
+      <div style={{ backgroundColor: "#FAFAFA", padding: "10px" }}>
+        <LineWrapper>
+          <FormItem label="구분" type="dropdown" name="career" options={["아르바이트", "인턴쉽"]} />
+          <FormItem label="회사명" name="companyName" />
+          <FormItem label="직무" name="position" />
+        </LineWrapper>
+        <LineWrapper>
+          <FormItem label="재직 시작일" type="date" name="startWorkDate" />
+          <FormItem label="재직 종료일" type="date" name="endWorkDate" />
+        </LineWrapper>
+      </div>
     </div>
   );
 };
@@ -124,14 +128,16 @@ const LanguageInfo = () => {
           어학 사항
         </TextStyle>
       </div>
-      <LineWrapper>
-        <FormItem label="어학 이름" name="languageName" />
-        <FormItem label="자격명" name="qualificationName" />
-      </LineWrapper>
-      <LineWrapper>
-        <FormItem label="등급/점수" name="gradeScore" />
-        <FormItem label="응시일자" type="date" name="testDate" />
-      </LineWrapper>
+      <div style={{ backgroundColor: "#FAFAFA", padding: "10px" }}>
+        <LineWrapper>
+          <FormItem label="어학 이름" name="languageName" />
+          <FormItem label="자격명" name="qualificationName" />
+        </LineWrapper>
+        <LineWrapper>
+          <FormItem label="등급/점수" name="gradeScore" />
+          <FormItem label="응시일자" type="date" name="testDate" />
+        </LineWrapper>
+      </div>
     </div>
   );
 };

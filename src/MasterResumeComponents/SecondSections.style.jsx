@@ -6,10 +6,23 @@ export const Form = styled.form`
   gap: 10px;
 `;
 
+export const ItemWrapper = styled.div`
+  background-color: #fafafa;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
 export const LineWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -24,7 +37,7 @@ export const Input = styled.input`
   margin: 0 30px 0 0;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 280px;
+  width: 275px;
 `;
 
 export const Dropdown = styled.select`
@@ -32,6 +45,6 @@ export const Dropdown = styled.select`
   margin: 0 30px 0 0;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 300px;
+  width: 295px;
   height: 40px;
 `;
