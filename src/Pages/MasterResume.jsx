@@ -1,19 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import FirstSection from "../MasterResumeComponents/FirstSection";
-import SecondSection from "../MasterResumeComponents/SecondSection";
+import { Inner } from "../Constants/style.jsx";
+import SecondSections from "../MasterResumeComponents/SecondSections.jsx";
 
 export const Container = styled.div`
-  height: 100vh; /* 화면 높이를 100%로 설정 */
-  display: flex; /* 자식 컴포넌트를 수직 방향으로 배치 */
-  flex-direction: column; /* 컬럼 방향으로 배치 (수직 중앙 정렬) */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 function MasterResume() {
   return (
     <Container>
-      <FirstSection />
-      <SecondSection />
+      <Inner>
+        <SecondSections />
+      </Inner>
     </Container>
   );
 }
