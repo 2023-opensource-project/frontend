@@ -40,20 +40,3 @@ export const Nav = styled.nav`
     }
   }
 `;
-
-export const Button = styled.button`
-  background-color: ${(props) => props.backgroundColor || "#E0D8FF"};
-  color: ${(props) => props.color || "#404040"};
-  width: 90px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 10px;
-
-  &:hover {
-    border: 2px solid #9c9c9c;
-    cursor: pointer;
-  }
-`;
