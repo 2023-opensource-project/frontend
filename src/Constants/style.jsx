@@ -23,11 +23,40 @@ export const Button = styled.button`
   font-weight: ${(props) => props.fontWeight || "500"};
   margin: ${(props) => props.margin || "0"};
   text-align: center;
-  border-radius: 5px;
+  border-radius: ${(props) => props.borderRadius || "5px"};
   border: none;
 
   &:hover {
     border: 2px solid #9c9c9c;
     cursor: pointer;
+  }
+`;
+
+export const Title = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 40px 0 20px 0;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+`;
+
+export const TabContainer = styled.div`
+  display: flex;
+  overflow: hidden;
+  margin: 10px 0;
+`;
+export const Tab = styled.div`
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 500;
+  background-color: ${(props) => (props.active ? "#F4EBFF" : "transparent")};
+  border: 1px solid #fafafa;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 3px solid #bcb3da;
   }
 `;
