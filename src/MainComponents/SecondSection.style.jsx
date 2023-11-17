@@ -9,26 +9,6 @@ export const Section = styled.div`
   flex-wrap: wrap;
 `;
 
-export const TabContainer = styled.div`
-  display: flex;
-  overflow: hidden;
-  margin: 10px 0;
-`;
-export const Tab = styled.div`
-  flex: 1;
-  padding: 10px 0;
-  text-align: center;
-  font-weight: 500;
-  background-color: ${(props) => (props.active ? "#F4EBFF" : "transparent")};
-  border: 1px solid #fafafa;
-  border-bottom: 3px solid transparent;
-  cursor: pointer;
-
-  &:hover {
-    border-bottom: 3px solid #bcb3da;
-  }
-`;
-
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;

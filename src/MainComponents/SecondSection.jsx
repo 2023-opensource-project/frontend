@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Section, TabContainer, Tab } from "./SecondSection.style.jsx";
-import { Inner, TextStyle } from "../Constants/style.jsx";
+import { Section } from "./SecondSection.style.jsx";
+import { TabContainer, Tab, Inner, TextStyle } from "../Constants/style.jsx";
 import TabContent from "./TabContent.jsx";
 
 function SecondSection() {
