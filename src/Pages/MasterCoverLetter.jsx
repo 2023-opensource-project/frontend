@@ -5,6 +5,7 @@ import TitleContainer from "../MasterCoverLetterComponents/TitleContainer";
 import TabTitleContainer from "../MasterCoverLetterComponents/TabTitleContainer";
 import GPTButton from "../MasterCoverLetterComponents/GPTButton";
 import Recommend from "../MasterCoverLetterComponents/Recommend";
+import FinalInput from "../MasterCoverLetterComponents/FinalInput";
 // import Section1 from "../MasterCoverLetterComponents/Section1";
 
 export const Container = styled.div`
@@ -18,6 +19,7 @@ function MasterCoverLetter() {
   const [tabContents, setTabContents] = useState(Array(10).fill(""));
   const [textLength, setTextLength] = useState(0);
   const [operationResult, setOperationResult] = useState({ operation: "", result: "" });
+  const [finalContent, setFinalContent] = useState("");
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -36,6 +38,11 @@ function MasterCoverLetter() {
     setOperationResult({ operation, result });
   };
 
+  const handleFinalInputChange = (event) => {
+    const { value } = event.target;
+    setFinalContent(value);
+  };
+
   return (
     <Container>
       <Inner>
@@ -51,6 +58,11 @@ function MasterCoverLetter() {
         />
         <GPTButton handleOperation={handleOperation} />
         <Recommend operationResult={operationResult} />
+        <FinalInput
+          finalContent={finalContent}
+          handleFinalInputChange={handleFinalInputChange}
+          textLength={textLength}
+        />
         {/* <Section1 /> */}
       </Inner>
     </Container>
