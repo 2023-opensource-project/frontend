@@ -6,7 +6,8 @@ import TabTitleContainer from "../MasterCoverLetterComponents/TabTitleContainer"
 import GPTButton from "../MasterCoverLetterComponents/GPTButton";
 import Recommend from "../MasterCoverLetterComponents/Recommend";
 import FinalInput from "../MasterCoverLetterComponents/FinalInput";
-// import Section1 from "../MasterCoverLetterComponents/Section1";
+import Save from "../MasterCoverLetterComponents/Save";
+import { toast } from "react-toastify";
 
 export const Container = styled.div`
   height: 100vh;
@@ -43,6 +44,10 @@ function MasterCoverLetter() {
     setFinalContent(value);
   };
 
+  const handleSave = () => {
+    toast.success("성공적으로 저장되었습니다.");
+  };
+
   return (
     <Container>
       <Inner>
@@ -63,7 +68,7 @@ function MasterCoverLetter() {
           handleFinalInputChange={handleFinalInputChange}
           textLength={textLength}
         />
-        {/* <Section1 /> */}
+        <Save handleSave={handleSave} />
       </Inner>
     </Container>
   );
