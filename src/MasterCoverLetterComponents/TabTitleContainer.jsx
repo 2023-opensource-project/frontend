@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import styled from "styled-components";
 import { TabContainer, Tab, TextStyle } from "../Constants/style";
+import { Textarea } from "./Common";
 
 const TabCon = styled(TabContainer)`
   flex-wrap: wrap;
@@ -39,9 +40,19 @@ const tablTitle2 = [
 
 function TabTItleContainer() {
   const [activeTab, setActiveTab] = useState(0);
+  const [tabContents, setTabContents] = useState(Array(10).fill(""));
+  const [textLength, setTextLength] = useState(0);
 
   const handleTabClick = (index) => {
     setActiveTab(index);
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    const updatedContents = [...tabContents];
+    updatedContents[activeTab] = value;
+    setTabContents(updatedContents);
+    setTextLength(value.length);
   };
 
   return (
@@ -60,6 +71,14 @@ function TabTItleContainer() {
           ORIGIN {tablTitle2[activeTab]}
         </TextStyle>
       }
+
+      <Textarea name="content" value={tabContents[activeTab]} onChange={handleInputChange} />
+
+      <div style={{ marginTop: "5px" }}>
+        <TextStyle textAlign="right" fontSize="11px">
+          글자 수 세기: {textLength}자
+        </TextStyle>
+      </div>
     </div>
   );
 }
