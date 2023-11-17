@@ -1,26 +1,10 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { TextStyle } from "../Constants/style";
 import { TabCon, TabNew } from "./MasterCoverLetter.style";
 import { Textarea } from "./Common";
 import { tabTitles, tabTitle2 } from "./TabContents";
 
-function TabTItleContainer() {
-  const [activeTab, setActiveTab] = useState(0);
-  const [tabContents, setTabContents] = useState(Array(10).fill(""));
-  const [textLength, setTextLength] = useState(0);
-
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-  };
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    const updatedContents = [...tabContents];
-    updatedContents[activeTab] = value;
-    setTabContents(updatedContents);
-    setTextLength(value.length);
-  };
-
+function TabTitleContainer({ activeTab, tabContents, textLength, handleTabClick, handleInputChange }) {
   return (
     <div>
       <div style={{ display: "flex" }}>
@@ -49,4 +33,4 @@ function TabTItleContainer() {
   );
 }
 
-export default TabTItleContainer;
+export default TabTitleContainer;
