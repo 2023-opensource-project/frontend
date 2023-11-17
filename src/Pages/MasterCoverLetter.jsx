@@ -4,6 +4,7 @@ import { Inner } from "../Constants/style";
 import TitleContainer from "../MasterCoverLetterComponents/TitleContainer";
 import TabTitleContainer from "../MasterCoverLetterComponents/TabTitleContainer";
 import GPTButton from "../MasterCoverLetterComponents/GPTButton";
+import Recommend from "../MasterCoverLetterComponents/Recommend";
 // import Section1 from "../MasterCoverLetterComponents/Section1";
 
 export const Container = styled.div`
@@ -49,6 +50,7 @@ function MasterCoverLetter() {
           handleInputChange={handleInputChange}
         />
         <GPTButton handleOperation={handleOperation} />
+        <Recommend operationResult={operationResult} />
         {/* <Section1 /> */}
       </Inner>
     </Container>
