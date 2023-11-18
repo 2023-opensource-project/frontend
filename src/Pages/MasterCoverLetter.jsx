@@ -1,6 +1,5 @@
 import { React, useState } from "react";
-import styled from "styled-components";
-import { Inner } from "../Constants/style";
+import { Container, Inner } from "../Constants/style";
 import TitleContainer from "../MasterCoverLetterComponents/TitleContainer";
 import TabTitleContainer from "../MasterCoverLetterComponents/TabTitleContainer";
 import GPTButton from "../MasterCoverLetterComponents/GPTButton";
@@ -8,12 +7,6 @@ import Recommend from "../MasterCoverLetterComponents/Recommend";
 import FinalInput from "../MasterCoverLetterComponents/FinalInput";
 import Save from "../MasterCoverLetterComponents/Save";
 import { toast } from "react-toastify";
-
-export const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
 
 function MasterCoverLetter() {
   const [activeTab, setActiveTab] = useState(0);

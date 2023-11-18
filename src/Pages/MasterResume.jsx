@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { Inner, Button } from "../Constants/style";
+import { Container, Inner, Button } from "../Constants/style";
 import { Form } from "../MasterResumeComponents/MasterResume.style";
 import PersonalInfo from "../MasterResumeComponents/PersonalInfo";
 import SchoolInfo from "../MasterResumeComponents/SchoolInfo";
@@ -9,12 +8,6 @@ import EducationInfo from "../MasterResumeComponents/EducationInfo";
 import LanguageInfo from "../MasterResumeComponents/LanguageInfo";
 import AwardsInfo from "../MasterResumeComponents/AwardsInfo";
 import QualificationInfo from "../MasterResumeComponents/QualificationInfo";
-
-export const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
 
 function MasterResume() {
   return (
