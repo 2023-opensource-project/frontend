@@ -23,3 +23,10 @@ export const SignupLink = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;
+
+export const ErrorMessage = styled.div`
+  color: red;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 10px;
+`;

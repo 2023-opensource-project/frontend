@@ -1,8 +1,8 @@
 import React from "react";
 import { Title, Button } from "../Constants/style";
-import { Container, Input, SignupLink } from "../LoginComponents/LoginCom.style";
+import { Container, Input, SignupLink, ErrorMessage } from "../LoginComponents/LoginCom.style";
 
-function LoginCom({ handleLoginSubmit, id, handleIdChange, password, handlePasswordChange }) {
+function LoginCom({ handleLoginSubmit, id, handleIdChange, password, handlePasswordChange, errorMessage }) {
   return (
     <Container>
       <Title style={{ margin: "0" }}>로그인</Title>
@@ -14,6 +14,7 @@ function LoginCom({ handleLoginSubmit, id, handleIdChange, password, handlePassw
         </Button>
       </form>
       <SignupLink to="/signup">[회원가입]</SignupLink>
+      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </Container>
   );
 }
