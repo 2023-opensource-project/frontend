@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Title, Button } from "../Constants/style";
-import companyList from "../CoverLetter/CompanyList";
+import companyList from "./CompanyList";
 
 const SelectBox = styled.select`
   width: 300px;
