@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import { Container, Inner } from "../Constants/style";
-import CompanySelection from "../CoverLetter/CompanySelection";
-import CoverLetterTab from "../CoverLetter/CoverLetterTab";
-import OriginInput from "../CoverLetter/OriginInput";
+import CompanySelection from "../CoverLetterComponents/CompanySelection";
+import CoverLetterTab from "../CoverLetterComponents/CoverLetterTab";
+import OriginInput from "../CoverLetterComponents/OriginInput";
 import GPTButton from "../MasterCoverLetterComponents/GPTButton";
 import Recommend from "../MasterCoverLetterComponents/Recommend";
 import FinalInput from "../MasterCoverLetterComponents/FinalInput";

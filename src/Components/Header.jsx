@@ -1,9 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { HeaderContainer, Nav } from "./Header.style.jsx";
 import { Inner, Button } from "../Constants/style.jsx";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <HeaderContainer>
       <Inner>
@@ -33,7 +35,9 @@ function Header() {
                 </NavLink>
               </li>
             </ul>
-            <Button margin="10px">로그인</Button>
+            <Button margin="10px" onClick={() => navigate("/login")}>
+              로그인
+            </Button>
           </div>
         </Nav>
       </Inner>

@@ -6,6 +6,7 @@ import MasterResume from "./Pages/MasterResume";
 import MasterCoverLetter from "./Pages/MasterCoverLetter";
 import CoverLetter from "./Pages/CoverLetter";
 import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/masterCoverLetter" element={<MasterCoverLetter />} />
         <Route path="/coverLetter" element={<CoverLetter />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </BrowserRouter>
   );
