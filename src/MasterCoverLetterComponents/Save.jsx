@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../Constants/style";
+import { Button, FinalButtonContainer, FinalButton } from "../Constants/style";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -7,9 +7,12 @@ function Save({ handleSave }) {
   return (
     <div>
       <div style={{ borderTop: "1px dashed #DEDEDE", marginTop: "20px" }}>
-        <Button onClick={handleSave} backgroundColor="#BE9CFF" margin="10px 0 40px 0" style={{ float: "right" }}>
+        {/* <Button onClick={handleSave} backgroundColor="#BE9CFF" margin="10px 0 40px 0" style={{ float: "right" }}>
           저장
-        </Button>
+        </Button> */}
+        <FinalButtonContainer style={{ margin: "10px 0 40px 0" }}>
+          <FinalButton>저장</FinalButton>
+        </FinalButtonContainer>
       </div>
       <ToastContainer
         position="bottom-center"

@@ -21,7 +21,7 @@ function CompanySelection({ selectedCompany, handleCompanySelect, handleConfirmC
           </option>
         ))}
       </SelectBox>
-      <Button onClick={handleConfirmClick} backgroundColor="#BE9CFF" margin=" 0 10px ">
+      <Button onClick={handleConfirmClick} margin=" 0 10px ">
         확인
       </Button>
     </div>

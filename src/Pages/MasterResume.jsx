@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Inner, Button } from "../Constants/style";
+import { Container, Inner, FinalButtonContainer, FinalButton } from "../Constants/style";
 import { Form } from "../MasterResumeComponents/MasterResume.style";
 import PersonalInfo from "../MasterResumeComponents/PersonalInfo";
 import SchoolInfo from "../MasterResumeComponents/SchoolInfo";
@@ -22,11 +22,14 @@ function MasterResume() {
           <AwardsInfo />
           <QualificationInfo />
 
-          <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "40px" }}>
+          {/* <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "40px" }}>
             <Button type="submit" width="160px" height="40px" fontSize="16px" fontWeight="600">
               제출
             </Button>
-          </div>
+          </div> */}
+          <FinalButtonContainer>
+            <FinalButton type="submit">제출</FinalButton>
+          </FinalButtonContainer>
         </Form>
       </Inner>
     </Container>

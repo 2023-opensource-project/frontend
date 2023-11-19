@@ -12,6 +12,10 @@ export const HeaderContainer = styled.header`
     text-decoration: none;
     color: #404040;
   }
+
+  a.active {
+    font-weight: 600;
+  }
 `;
 
 export const Nav = styled.nav`

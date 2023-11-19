@@ -38,6 +38,19 @@ export const Button = styled.button`
   }
 `;
 
+export const FinalButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+`;
+
+export const FinalButton = styled(Button)`
+  width: 160px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+`;
+
 export const Title = styled.div`
   display: flex;
   align-items: center;
