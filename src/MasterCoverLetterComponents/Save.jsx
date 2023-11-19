@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../Constants/style";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Save({ handleSave }) {
   return (
