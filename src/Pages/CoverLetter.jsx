@@ -1,10 +1,13 @@
 import React from "react";
 import { Container, Inner } from "../Constants/style";
+import CompanySelection from "../CoverLetter/CompanySelection";
 
 function CoverLetter() {
   return (
     <Container>
-      <Inner></Inner>
+      <Inner>
+        <CompanySelection />
+      </Inner>
     </Container>
   );
 }
