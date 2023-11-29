@@ -14,7 +14,7 @@ function CoverLetterTab({ confirmedCompany, handleTabClick, activeTab }) {
           if (index < questions.length) {
             return (
               <Tab key={index} onClick={() => handleTabClick(index)} active={activeTab === index}>
-                <TextStyle fontSize="14px">{questions[index]}</TextStyle>
+                <TextStyle fontSize="14px">문항{index + 1}</TextStyle>
               </Tab>
             );
           } else {

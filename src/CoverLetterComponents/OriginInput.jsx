@@ -7,8 +7,8 @@ function OriginInput({ confirmedCompany, activeTab, tabContents, handleInputChan
   return (
     <div>
       <TextStyle textAlign="left" fontWeight="500" margin="10px 0">
-        ORIGIN{" "}
-        {`${companyList.find((company) => company.name === confirmedCompany).questions[activeTab]}을 작성하세요.`}
+        ORIGIN <br />
+        {companyList.find((company) => company.name === confirmedCompany).questions[activeTab]}
       </TextStyle>
       <Textarea name="content" value={tabContents[activeTab]} onChange={handleInputChange} />
       <div style={{ marginTop: "5px" }}>
