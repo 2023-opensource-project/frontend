@@ -37,7 +37,8 @@ function MasterCoverLetter() {
     setFinalContent(value);
   };
 
-  const handleSave = () => {
+  const handleSave = (e) => {
+    e.preventDefault();
     toast.success("성공적으로 저장되었습니다.");
   };
 

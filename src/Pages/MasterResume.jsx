@@ -8,12 +8,19 @@ import EducationInfo from "../MasterResumeComponents/EducationInfo";
 import LanguageInfo from "../MasterResumeComponents/LanguageInfo";
 import AwardsInfo from "../MasterResumeComponents/AwardsInfo";
 import QualificationInfo from "../MasterResumeComponents/QualificationInfo";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function MasterResume() {
+  const handleSave = (e) => {
+    e.preventDefault();
+    toast.success("성공적으로 저장되었습니다.");
+  };
+
   return (
     <Container>
       <Inner>
-        <Form>
+        <Form onSubmit={handleSave}>
           <PersonalInfo />
           <SchoolInfo />
           <CareerInfo />
@@ -22,11 +29,6 @@ function MasterResume() {
           <AwardsInfo />
           <QualificationInfo />
 
-          {/* <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "40px" }}>
-            <Button type="submit" width="160px" height="40px" fontSize="16px" fontWeight="600">
-              제출
-            </Button>
-          </div> */}
           <FinalButtonContainer>
             <FinalButton type="submit">제출</FinalButton>
           </FinalButtonContainer>
