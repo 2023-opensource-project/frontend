@@ -3,8 +3,13 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { HeaderContainer, Nav } from "./Header.style.jsx";
 import { Inner, Button } from "../Constants/style.jsx";
 
-function Header() {
+function Header({ currentUser, setCurrentUser }) {
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    navigate("/");
+  };
 
   return (
     <HeaderContainer>
@@ -35,9 +40,20 @@ function Header() {
                 </NavLink>
               </li>
             </ul>
-            <Button margin="10px" onClick={() => navigate("/login")}>
-              로그인
-            </Button>
+            {currentUser ? (
+              <div>
+                <NavLink to="/mypage" style={{ margin: "10px" }}>
+                  {currentUser.id}
+                </NavLink>
+                <Button margin="10px" onClick={handleLogout}>
+                  로그아웃
+                </Button>
+              </div>
+            ) : (
+              <Button margin="10px" onClick={() => navigate("/login")}>
+                로그인
+              </Button>
+            )}
           </div>
         </Nav>
       </Inner>

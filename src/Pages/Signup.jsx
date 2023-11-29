@@ -36,10 +36,16 @@ function Signup({ users, setUsers }) {
     if (!isValidId(id) || !isValidPassword(password)) {
       setErrorMessage("아이디와 비밀번호의 조건을 확인하세요.");
     } else {
-      setUsers([...users, { name, id, password }]);
+      const user = { id, password, name };
+      localStorage.setItem("users", JSON.stringify([...JSON.parse(localStorage.getItem("users") || "[]"), user]));
+      setUsers([...users, user]);
       navigate("/login");
     }
   };
+
+  // const user = { id, password, name };
+  // localStorage.setItem("users", JSON.stringify([...JSON.parse(localStorage.getItem("users") || "[]"), user]));
+  // navigate("/login");
 
   return (
     <SignupCom
