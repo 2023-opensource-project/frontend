@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Inner, FinalButtonContainer, FinalButton } from "../Constants/style";
 import { Form } from "../MasterResumeComponents/MasterResume.style";
+import JobofInterest from "../MasterResumeComponents/JobofInterest";
 import PersonalInfo from "../MasterResumeComponents/PersonalInfo";
 import SchoolInfo from "../MasterResumeComponents/SchoolInfo";
 import CareerInfo from "../MasterResumeComponents/CareerInfo";
@@ -21,6 +22,7 @@ function MasterResume() {
     <Container>
       <Inner>
         <Form onSubmit={handleSave}>
+          <JobofInterest />
           <PersonalInfo />
           <SchoolInfo />
           <CareerInfo />

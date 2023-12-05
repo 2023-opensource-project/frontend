@@ -14,6 +14,7 @@ function FormItem({ label, type = "text", name, options }) {
         <div>
           {type === "dropdown" ? (
             <Dropdown name={name}>
+              <option value="">선택하세요</option>
               {options.map((option, index) => (
                 <option value={option} key={index}>
                   {option}

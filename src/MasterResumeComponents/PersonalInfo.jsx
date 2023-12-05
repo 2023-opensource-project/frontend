@@ -5,7 +5,7 @@ import FormItem from "./FormItem";
 
 function PersonalInfo() {
   return (
-    <div style={{ margin: "40px 0 0 0" }}>
+    <div>
       <div style={{ borderBottom: "1px solid #ddd", marginBottom: "10px" }}>
         <TextStyle textAlign="left" fontSize="20px" fontWeight="600" margin="10px 0">
           기본 인적 사항
