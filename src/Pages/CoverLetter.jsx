@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 
 function CoverLetter() {
   const [selectedCompany, setSelectedCompany] = useState("");
+  const [selectedJob, setSelectedJob] = useState("");
   const [confirmedCompany, setConfirmedCompany] = useState("");
   const [activeTab, setActiveTab] = useState(0);
   const [tabContents, setTabContents] = useState(Array(6).fill(""));
@@ -20,6 +21,10 @@ function CoverLetter() {
 
   const handleCompanySelect = (e) => {
     setSelectedCompany(e.target.value);
+  };
+
+  const handleJobSelect = (e) => {
+    setSelectedJob(e.target.value);
   };
 
   const handleConfirmClick = () => {
@@ -63,6 +68,8 @@ function CoverLetter() {
         <CompanySelection
           selectedCompany={selectedCompany}
           handleCompanySelect={handleCompanySelect}
+          selectedJob={selectedJob}
+          handleJobSelect={handleJobSelect}
           handleConfirmClick={handleConfirmClick}
         />
 
