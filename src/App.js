@@ -8,6 +8,7 @@ import CoverLetter from "./Pages/CoverLetter";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Mypage from "./Pages/Mypage";
+import ChatButton from "./Components/ChatButton";
 import { ToastContainer } from "react-toastify";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         draggable
         pauseOnHover
       />
+      <ChatButton />
     </BrowserRouter>
   );
 }
